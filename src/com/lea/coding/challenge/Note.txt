@@ -1,0 +1,87 @@
+Simple Excel program using Java
+Compiled using Java 1.8
+
+Note:
+After entering all of the values, please press enter twice to display the result
+
+Created SpreadSheet.jar
+	to run: 
+		on command prompt type: java -jar SpreadSheet.jar, then enter
+		copy paste the following input data 
+----------------
+- Test Scenarios:
+----------------
+1. Worksheet size (first line) contains no space
+
+Input:
+2*2
+a1 = 2
+b1 =3
+a2 = a1 + b1
+b2 = a2 * 2
+
+Output
+	A	B	
+1	2	3	
+2	5	10
+-------------------
+2. Worksheet size (first line) contains space
+
+Input:
+2 * 2
+a1 = 2
+b1 =3
+a2 = a1 + b1
+b2 = a2 * 2
+
+Output:
+	A	B	
+1	2	3	
+2	5	10
+----------------- 
+3. Not existing reference (a4), then it will only convert the a4 value to 0 
+	and proceed with addition (a4 + b1)
+
+Input:
+2*2
+a1 = 2
+b1 =3
+a2 = a4 + b1
+b2 = a2 * 2
+
+Output:
+	A	B	
+1	2	3	
+2	3	6
+
+----------------- 
+4. No equals sign for field 'a1',then value should be converted to 0
+
+Input:
+2 * 2
+a1 2
+b1 =3
+a2 = a1 + b1
+b2 = a2 * 2
+
+Output:
+	A	B	
+1	0	3	
+2	3	6
+
+--------------- 
+5: Reference is case insensitive (example: a2 = A1 + b1)
+
+Input:
+2 * 3
+a1 = 2
+b1 =3
+c1 = 10
+a2 = A1 + b1
+b2 = a2 * 2
+c2=a1+a3
+
+Output:
+	A	B	C	
+1	2	3	10	
+2	5	10	2
